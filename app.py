@@ -12,7 +12,9 @@ from langchain.vectorstores import Qdrant
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
+from dotenv import load_dotenv
 
+load_dotenv()
 COHERE_API_KEY = os.environ["COHERE_API_KEY"]
 QDRANT_API_KEY = os.environ["QDRANT_API_KEY"]
 QDRANT_CLUSTER_URL = os.environ["QDRANT_CLUSTER_URL"]

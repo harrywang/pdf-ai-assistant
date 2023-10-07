@@ -10,12 +10,25 @@ This project is hosted on HuggingFace Spaces: [Live Demo of PDF AI Assistant](ht
 - Retrieve the top 3 similar chunks for each query using RetrievalQA and using a custom prompt by PromptTemplate, answer those queries
 
 ## How to run it locally:-
-To run this app locally, first clone this repo using `git clone`.<br><br>
-Now, install all libraries by running the following command in the terminal:<br>
+To run this app locally, first clone this repo using `git clone`.
+
+
+Now, create a virtual environment and install all libraries:
 ```python
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
-<br><br>
+
+Create a `.env` file and include the following:
+
+```
+OPENAI_API_KEY=xxxxx
+COHERE_API_KEY=xxxxx
+QDRANT_API_KEY=xxxxx
+QDRANT_CLUSTER_URL=xxxx
+QDRANT_COLLECTION_NAME=pdf-ai-assistant
+```
 Now, run the app from the terminal:<br>
 ```python
 gradio app.py
